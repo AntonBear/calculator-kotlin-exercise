@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/main"
-        android:background="#F1F3F6"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".CalculatorActivity">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/light_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculatorActivity">
 
-        <TextView
-            android:id="@+id/calculator"
-            style="@style/header_calculator_font"
-            android:layout_width="140dp"
-            android:layout_height="34dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
-            android:gravity="center_vertical"
-            android:text="@string/calculator"
-            android:textAppearance="@style/calculator"
-            android:textColor="#373A37"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/calculator"
+        style="@style/header_calculator_font"
+        android:layout_width="140dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:text="@string/calculator"
+        android:textAppearance="@style/calculator"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/displayBackgroundNumbers"
@@ -52,242 +52,209 @@
         android:textSize="42sp"
         app:layout_constraintBottom_toBottomOf="@+id/displayBackgroundNumbers"
         app:layout_constraintEnd_toEndOf="@+id/displayBackgroundNumbers"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/displayBackgroundNumbers"
-        app:layout_constraintTop_toTopOf="@+id/displayBackgroundNumbers" />
+        app:layout_constraintTop_toTopOf="@+id/displayBackgroundNumbers"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/button_ac"
-        style="@style/Operations"
+        style="@style/whiteOperationButtonStyle"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="24dp"
+        android:background="@drawable/white_rounded_button"
         android:text="@string/AC"
-        app:layout_constraintDimensionRatio="w,1:1"
-        app:layout_constraintEnd_toStartOf="@+id/button_plus_minus"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/displayBackgroundNumbers" />
+        app:layout_constraintDimensionRatio="1:1"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="268dp" />
 
-        <TextView
-            android:id="@+id/button_plus_minus"
-            style="@style/Operations"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="@string/change_sign"
-            app:layout_constraintDimensionRatio="w,1:1"
-            app:layout_constraintEnd_toStartOf="@+id/button_percent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_ac"
-            app:layout_constraintTop_toTopOf="@+id/button_ac" />
+    <TextView
+        android:id="@+id/button_plus_minus"
+        style="@style/whiteOperationButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:background="@drawable/white_rounded_button"
+        android:text="@string/change_sign" />
 
-        <TextView
-            android:id="@+id/button_percent"
-            style="@style/Operations"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="@string/percent"
-            app:layout_constraintDimensionRatio="w,1:1"
-            app:layout_constraintEnd_toStartOf="@+id/button_divide"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_plus_minus"
-            app:layout_constraintTop_toTopOf="@+id/button_plus_minus" />
+    <TextView
+        android:id="@+id/button_percent"
+        style="@style/whiteOperationButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:background="@drawable/white_rounded_button"
+        android:text="@string/percent" />
 
     <TextView
         android:id="@+id/button_divide"
-        style="@style/Operations_Sci"
+        style="@style/blueOperationButtonStyle"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="9dp"
-        android:text="@string/divide"
-        app:layout_constraintDimensionRatio="w,1:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_percent"
-        app:layout_constraintTop_toTopOf="@+id/button_percent" />
+        app:layout_constraintDimensionRatio="1:1"
+        android:background="@drawable/blue_rounded_button"
+        android:text="@string/divide" />
 
     <TextView
         android:id="@+id/button_number_7"
-        style="@style/Operations"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        style="@style/whiteOperationButtonStyle"
+        android:background="@drawable/white_rounded_button"
         android:text="@string/calc_button_7"
-        app:layout_constraintDimensionRatio="w,1:1"
-        app:layout_constraintEnd_toStartOf="@+id/button_number_8"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/button_ac"
-        app:layout_constraintTop_toBottomOf="@+id/button_ac" />
+        app:layout_constraintDimensionRatio="1:1"
+        tools:layout_editor_absoluteX="195dp"
+        tools:layout_editor_absoluteY="273dp" />
 
-        <TextView
-            android:id="@+id/button_number_8"
-            style="@style/Operations"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="@string/calc_button_8"
-            app:layout_constraintDimensionRatio="w,1:1"
-            app:layout_constraintEnd_toStartOf="@+id/button_number_9"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_number_7"
-            app:layout_constraintTop_toTopOf="@+id/button_number_7" />
+    <TextView
+        android:id="@+id/button_number_8"
+        style="@style/whiteOperationButtonStyle"
+        android:background="@drawable/white_rounded_button"
+        android:text="@string/calc_button_8"
+        app:layout_constraintDimensionRatio="1:1"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="340dp" />
 
-        <TextView
-            android:id="@+id/button_number_9"
-            style="@style/Operations"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="@string/calc_button_9"
-            app:layout_constraintDimensionRatio="w,1:1"
-            app:layout_constraintEnd_toStartOf="@+id/button_multiply"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_number_8"
-            app:layout_constraintTop_toTopOf="@+id/button_number_8" />
+    <TextView
+        android:id="@+id/button_number_9"
+        style="@style/whiteOperationButtonStyle"
+        android:background="@drawable/white_rounded_button"
+        android:text="@string/calc_button_9"
+        app:layout_constraintDimensionRatio="1:1"
+        tools:layout_editor_absoluteX="229dp"
+        tools:layout_editor_absoluteY="500dp" />
 
     <TextView
         android:id="@+id/button_multiply"
-        style="@style/Operations_Sci"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        style="@style/blueOperationButtonStyle"
+        android:background="@drawable/blue_rounded_button"
         android:text="@string/multiply"
-        app:layout_constraintDimensionRatio="w,1:1"
-        app:layout_constraintEnd_toEndOf="@+id/button_divide"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_number_9"
-        app:layout_constraintTop_toTopOf="@+id/button_number_9" />
+        app:layout_constraintDimensionRatio="1:1"
+        tools:layout_editor_absoluteX="337dp"
+        tools:layout_editor_absoluteY="364dp" />
 
     <TextView
         android:id="@+id/button_number_4"
-        style="@style/Operations"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        style="@style/whiteOperationButtonStyle"
+        android:background="@drawable/white_rounded_button"
         android:text="@string/calc_button_4"
-        app:layout_constraintDimensionRatio="w,1:1"
-        app:layout_constraintEnd_toStartOf="@+id/button_number_5"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/button_number_7"
-        app:layout_constraintTop_toBottomOf="@+id/button_number_7" />
+        app:layout_constraintDimensionRatio="1:1"
+        tools:layout_editor_absoluteX="264dp"
+        tools:layout_editor_absoluteY="314dp" />
 
-        <TextView
-            android:id="@+id/button_number_5"
-            style="@style/Operations"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="@string/calc_button_5"
-            app:layout_constraintDimensionRatio="w,1:1"
-            app:layout_constraintEnd_toStartOf="@+id/button_number_6"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_number_4"
-            app:layout_constraintTop_toTopOf="@+id/button_number_4" />
+    <TextView
+        android:id="@+id/button_number_5"
+        style="@style/whiteOperationButtonStyle"
+        android:background="@drawable/white_rounded_button"
+        android:text="@string/calc_button_5"
+        app:layout_constraintDimensionRatio="1:1"
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="372dp" />
 
-        <TextView
-            android:id="@+id/button_number_6"
-            style="@style/Operations"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="@string/calc_button_6"
-            app:layout_constraintDimensionRatio="w,1:1"
-            app:layout_constraintEnd_toStartOf="@+id/button_minus"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_number_5"
-            app:layout_constraintTop_toTopOf="@+id/button_number_5" />
+    <TextView
+        android:id="@+id/button_number_6"
+        style="@style/whiteOperationButtonStyle"
+        android:background="@drawable/white_rounded_button"
+        android:text="@string/calc_button_6"
+        app:layout_constraintDimensionRatio="1:1"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="364dp" />
 
     <TextView
         android:id="@+id/button_minus"
-        style="@style/Operations_Sci"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        style="@style/blueOperationButtonStyle"
+        android:background="@drawable/blue_rounded_button"
         android:text="@string/minus"
-        app:layout_constraintDimensionRatio="w,1:1"
-        app:layout_constraintEnd_toEndOf="@+id/button_multiply"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_number_6"
-        app:layout_constraintTop_toTopOf="@+id/button_number_6" />
+        app:layout_constraintDimensionRatio="1:1"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="232dp" />
 
     <TextView
         android:id="@+id/button_number_1"
-        style="@style/Operations"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        style="@style/whiteOperationButtonStyle"
+        android:background="@drawable/white_rounded_button"
         android:text="@string/calc_button_1"
-        app:layout_constraintDimensionRatio="w,1:1"
-        app:layout_constraintEnd_toStartOf="@+id/button_number_2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/button_number_4"
-        app:layout_constraintTop_toBottomOf="@+id/button_number_4" />
+        app:layout_constraintDimensionRatio="1:1"
+        tools:layout_editor_absoluteX="245dp"
+        tools:layout_editor_absoluteY="232dp" />
 
-        <TextView
-            android:id="@+id/button_number_2"
-            style="@style/Operations"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="@string/calc_button_2"
-            app:layout_constraintDimensionRatio="w,1:1"
-            app:layout_constraintEnd_toStartOf="@+id/button_number_3"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_number_1"
-            app:layout_constraintTop_toTopOf="@+id/button_number_1" />
+    <TextView
+        android:id="@+id/button_number_2"
+        style="@style/whiteOperationButtonStyle"
+        android:background="@drawable/white_rounded_button"
+        android:text="@string/calc_button_2"
+        app:layout_constraintDimensionRatio="1:1"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="216dp" />
 
-        <TextView
-            android:id="@+id/button_number_3"
-            style="@style/Operations"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="@string/calc_button_3"
-            app:layout_constraintDimensionRatio="w,1:1"
-            app:layout_constraintEnd_toStartOf="@+id/button_plus"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_number_2"
-            app:layout_constraintTop_toTopOf="@+id/button_number_2" />
+    <TextView
+        android:id="@+id/button_number_3"
+        style="@style/whiteOperationButtonStyle"
+        android:background="@drawable/white_rounded_button"
+        android:text="@string/calc_button_3"
+        app:layout_constraintDimensionRatio="1:1"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="291dp" />
 
     <TextView
         android:id="@+id/button_plus"
-        style="@style/Operations_Sci"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        style="@style/blueOperationButtonStyle"
+        android:background="@drawable/blue_rounded_button"
         android:text="@string/plus"
-        app:layout_constraintDimensionRatio="w,1:1"
-        app:layout_constraintEnd_toEndOf="@+id/button_minus"
-        app:layout_constraintStart_toEndOf="@+id/button_number_3"
-        app:layout_constraintTop_toTopOf="@+id/button_number_3" />
+        app:layout_constraintDimensionRatio="1:1"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="450dp" />
 
     <TextView
         android:id="@+id/button_number_0"
-        style="@style/Operations"
+        style="@style/whiteOperationButtonStyle"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/white_button_extra"
-        android:text="@string/calc_button_0"
-        app:layout_constraintDimensionRatio="w,1:2"
-        app:layout_constraintEnd_toStartOf="@+id/button_dot"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_weight="2"
-        app:layout_constraintStart_toStartOf="@+id/button_number_1"
-        app:layout_constraintTop_toTopOf="@+id/button_dot" />
+        android:background="@drawable/white_rounded_button"
+        android:text="@string/calc_button_0" />
 
-        <TextView
-            android:id="@+id/button_dot"
-            style="@style/Operations"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="@string/dot"
-            app:layout_constraintDimensionRatio="w,1:1"
-            app:layout_constraintEnd_toStartOf="@+id/button_equal"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toEndOf="@+id/button_number_0"
-            app:layout_constraintTop_toTopOf="@+id/button_equal" />
+
+    <TextView
+        android:id="@+id/button_dot"
+        style="@style/whiteOperationButtonStyle"
+        android:background="@drawable/white_rounded_button"
+        android:text="@string/dot"
+        app:layout_constraintDimensionRatio="1:1"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="282dp" />
 
     <TextView
         android:id="@+id/button_equal"
-        style="@style/Operations_Sci"
+        style="@style/blueOperationButtonStyle"
+        android:background="@drawable/blue_rounded_button"
+        android:text="@string/equal"
+        app:layout_constraintDimensionRatio="1:1"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="364dp" />
+
+    <androidx.constraintlayout.helper.widget.Grid
+        android:id="@+id/grid"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/equal"
-        app:layout_constraintDimensionRatio="w,1:1"
-        app:layout_constraintEnd_toEndOf="@+id/button_plus"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toEndOf="@+id/button_dot"
-        app:layout_constraintTop_toBottomOf="@+id/button_plus" />
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        app:constraint_referenced_ids="button_number_0,button_ac,button_plus_minus,button_percent,button_divide,button_number_7,button_number_8,button_number_9,button_multiply,button_number_4,button_number_5,button_number_6,button_minus,button_number_1,button_number_2,button_number_3,button_plus,button_dot,button_equal"
+        app:grid_columns="4"
+        app:grid_horizontalGaps="16dp"
+        app:grid_orientation="horizontal"
+        app:grid_rows="5"
+        app:grid_spans="16:1x2"
+        app:grid_verticalGaps="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/displayBackgroundNumbers" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/numbersGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="button_number_0,button_number_1,button_number_2,button_number_3,button_number_4,button_number_5,button_number_6,button_number_7,button_number_8,button_number_9" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
